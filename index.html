@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TaskFlow</title>
+<title>FlowDesk</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,115 +19,142 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    color: #222;
+    background: #f8fafc;
+    color: #1e293b;
 }
 
 /* NAVBAR */
 .nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 8%;
     position: fixed;
     width: 100%;
-    background: #fff;
-    border-bottom: 1px solid #eee;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.7);
 }
 
 .logo {
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .nav a {
-    margin-left: 20px;
+    margin-left: 25px;
     text-decoration: none;
-    color: #333;
+    color: #334155;
+    font-size: 14px;
 }
 
 /* HERO */
 .hero {
-    padding: 140px 8% 80px;
+    padding: 160px 8% 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .hero-text {
-    max-width: 500px;
+    max-width: 520px;
 }
 
 .hero h1 {
-    font-size: 44px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    color: #666;
+    font-size: 48px;
+    line-height: 1.2;
     margin-bottom: 20px;
 }
 
+.hero p {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* BUTTONS */
 .btn {
-    background: #4f46e5;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 8px;
+    padding: 14px 28px;
+    border-radius: 10px;
     text-decoration: none;
+    font-weight: 500;
+    margin-right: 10px;
     display: inline-block;
     transition: 0.3s;
 }
 
-.btn:hover {
-    background: #4338ca;
+.btn-primary {
+    background: #6366f1;
+    color: #fff;
 }
 
-/* IMAGE */
-.hero img {
-    width: 380px;
+.btn-primary:hover {
+    background: #4f46e5;
+}
+
+.btn-outline {
+    border: 1px solid #cbd5f5;
+    color: #4338ca;
+}
+
+/* HERO IMAGE CARD */
+.hero-img {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.hero-img img {
+    width: 350px;
+    border-radius: 12px;
 }
 
 /* FEATURES */
 .features {
-    padding: 80px 8%;
-    background: #f9fafb;
+    padding: 100px 8%;
 }
 
 .features h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 30px;
 }
 
 .card {
     background: white;
-    padding: 25px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
 }
 
 /* CTA */
 .cta {
-    padding: 80px 8%;
+    margin: 100px 8%;
+    padding: 60px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #6366f1, #818cf8);
+    color: white;
     text-align: center;
 }
 
 .cta h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 /* FOOTER */
 footer {
-    background: #111;
-    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    color: #64748b;
 }
 
 /* MOBILE */
@@ -137,9 +165,12 @@ footer {
         text-align: center;
     }
 
-    .hero img {
+    .hero-img {
+        margin-top: 40px;
+    }
+
+    .hero-img img {
         width: 100%;
-        margin-top: 30px;
     }
 
     .grid {
@@ -148,7 +179,7 @@ footer {
 
     .nav {
         flex-direction: column;
-        align-items: center;
+        gap: 10px;
     }
 }
 
@@ -159,7 +190,7 @@ footer {
 
 <!-- NAV -->
 <div class="nav">
-    <div class="logo">TaskFlow</div>
+    <div class="logo">FlowDesk</div>
     <div>
         <a href="#">Features</a>
         <a href="#">Pricing</a>
@@ -169,46 +200,56 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
+
     <div class="hero-text">
-        <h1>Manage Your Work Faster</h1>
-        <p>TaskFlow helps you organize tasks, track progress, and stay productive every day.</p>
-        <a href="#" class="btn">Get Started</a>
+        <h1>Work smarter, not harder</h1>
+        <p>FlowDesk helps teams manage tasks, collaborate faster, and stay productive without stress.</p>
+
+        <a href="#" class="btn btn-primary">Get Started</a>
+        <a href="#" class="btn btn-outline">Learn More</a>
     </div>
 
-    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="">
+    <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1551281044-8c2c7c1f4c57" alt="">
+    </div>
+
 </section>
 
 <!-- FEATURES -->
 <section class="features">
-    <h2>Features</h2>
+    <h2>Everything you need</h2>
 
     <div class="grid">
+
         <div class="card">
             <h3>Task Management</h3>
-            <p>Create and organize your tasks easily.</p>
+            <p>Organize tasks with clean and simple workflows.</p>
         </div>
 
         <div class="card">
-            <h3>Progress Tracking</h3>
-            <p>Monitor your daily productivity.</p>
+            <h3>Analytics</h3>
+            <p>Track progress with powerful insights and reports.</p>
         </div>
 
         <div class="card">
-            <h3>Team Collaboration</h3>
-            <p>Work together with your team in real-time.</p>
+            <h3>Collaboration</h3>
+            <p>Work together in real-time with your team.</p>
         </div>
+
     </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-    <h2>Start using TaskFlow today</h2>
-    <a href="#" class="btn">Sign Up Free</a>
+    <h2>Start your free trial today</h2>
+    <p>No credit card required</p>
+    <br>
+    <a href="#" class="btn btn-primary">Try Now</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2026 TaskFlow</p>
+    <p>© 2026 FlowDesk</p>
 </footer>
 
 </body>
