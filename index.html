@@ -272,13 +272,19 @@ footer{
         <a href="#" class="btn btn-outline">Learn More</a>
     </div>
 
-    <div class="hero-img">
-        <div class="mock-card">
-            <h4>Dashboard</h4>
-            <p>Tasks completed: 75%</p>
-            <div class="bar"></div>
-        </div>
+  <div class="hero-img">
+
+    <!-- Main Image -->
+    <img src="https://images.unsplash.com/photo-1551281044-8c2c7c1f4c57" alt="dashboard">
+
+    <!-- Floating Card -->
+    <div class="mock-card">
+        <h4>Dashboard</h4>
+        <p>Tasks completed: 75%</p>
+        <div class="bar"></div>
     </div>
+
+</div>
 
 </section>
 
@@ -362,3 +368,25 @@ footer{
 
 </body>
 </html>
+
+.hero-img {
+    position: relative;
+}
+
+.hero-img img {
+    width: 380px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* floating card on image */
+.mock-card {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 220px;
+}
