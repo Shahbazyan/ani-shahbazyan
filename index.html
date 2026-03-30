@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sirun Ankyun</title>
+<title>TaskFlow</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,94 +17,76 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
+    font-family: 'Inter', sans-serif;
+    color: #222;
 }
 
 /* NAVBAR */
-.navbar {
+.nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 8%;
     position: fixed;
     width: 100%;
     background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #eee;
 }
 
 .logo {
     font-weight: 600;
-    font-size: 20px;
 }
 
-.nav-links a {
+.nav a {
     margin-left: 20px;
     text-decoration: none;
     color: #333;
-    font-size: 14px;
 }
 
 /* HERO */
 .hero {
+    padding: 140px 8% 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 120px 8% 60px;
-    min-height: 100vh;
-    background: linear-gradient(to right, #ffe0ec, #f9f9ff);
 }
 
 .hero-text {
     max-width: 500px;
 }
 
-.hero-text h1 {
-    font-size: 42px;
+.hero h1 {
+    font-size: 44px;
     margin-bottom: 15px;
 }
 
-.hero-text p {
-    margin-bottom: 20px;
+.hero p {
     color: #666;
+    margin-bottom: 20px;
 }
 
 .btn {
-    display: inline-block;
+    background: #4f46e5;
+    color: white;
     padding: 12px 25px;
-    background: #ff6b81;
-    color: #fff;
-    border-radius: 25px;
+    border-radius: 8px;
     text-decoration: none;
+    display: inline-block;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #ff4757;
+    background: #4338ca;
 }
 
-/* HERO IMAGE */
-.hero-img img {
-    width: 350px;
-    border-radius: 20px;
-}
-
-/* ABOUT */
-.about {
-    padding: 80px 8%;
-    text-align: center;
-}
-
-.about p {
-    max-width: 600px;
-    margin: 15px auto;
-    color: #666;
+/* IMAGE */
+.hero img {
+    width: 380px;
 }
 
 /* FEATURES */
 .features {
     padding: 80px 8%;
-    background: #f7f7f7;
+    background: #f9fafb;
 }
 
 .features h2 {
@@ -119,54 +101,43 @@ body {
 }
 
 .card {
-    background: #fff;
+    background: white;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 10px;
     transition: 0.3s;
-    text-align: center;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
 }
 
-/* CONTACT */
-.contact {
+/* CTA */
+.cta {
     padding: 80px 8%;
     text-align: center;
 }
 
-form {
-    max-width: 500px;
-    margin: auto;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 6px;
-    border: 1px solid #ddd;
+.cta h2 {
+    margin-bottom: 15px;
 }
 
 /* FOOTER */
 footer {
-    background: #222;
-    color: #fff;
+    background: #111;
+    color: white;
     text-align: center;
     padding: 20px;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media (max-width: 768px) {
 
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 140px;
     }
 
-    .hero-img img {
+    .hero img {
         width: 100%;
         margin-top: 30px;
     }
@@ -175,8 +146,9 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .nav-links {
-        display: none;
+    .nav {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -185,13 +157,12 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
-    <div class="logo">Sirun Ankyun</div>
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
+<!-- NAV -->
+<div class="nav">
+    <div class="logo">TaskFlow</div>
+    <div>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
         <a href="#">Contact</a>
     </div>
 </div>
@@ -199,59 +170,45 @@ footer {
 <!-- HERO -->
 <section class="hero">
     <div class="hero-text">
-        <h1>Feel Beautiful Every Day</h1>
-        <p>Professional beauty services in a calm and modern environment.</p>
-        <a href="#" class="btn">Book Now</a>
+        <h1>Manage Your Work Faster</h1>
+        <p>TaskFlow helps you organize tasks, track progress, and stay productive every day.</p>
+        <a href="#" class="btn">Get Started</a>
     </div>
 
-    <div class="hero-img">
-        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" alt="">
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about">
-    <h2>About Us</h2>
-    <p>We provide high quality beauty services with experienced specialists. Our goal is to make every client feel confident and beautiful.</p>
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="">
 </section>
 
 <!-- FEATURES -->
 <section class="features">
-    <h2>Our Services</h2>
+    <h2>Features</h2>
 
     <div class="grid">
         <div class="card">
-            <h3>Hair Styling</h3>
-            <p>Modern and stylish looks for any occasion.</p>
+            <h3>Task Management</h3>
+            <p>Create and organize your tasks easily.</p>
         </div>
 
         <div class="card">
-            <h3>Makeup</h3>
-            <p>Professional makeup with premium products.</p>
+            <h3>Progress Tracking</h3>
+            <p>Monitor your daily productivity.</p>
         </div>
 
         <div class="card">
-            <h3>Skin Care</h3>
-            <p>Healthy glowing skin treatments.</p>
+            <h3>Team Collaboration</h3>
+            <p>Work together with your team in real-time.</p>
         </div>
     </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
-    <h2>Contact Us</h2>
-
-    <form>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <textarea rows="4" placeholder="Message"></textarea>
-        <button class="btn">Send Message</button>
-    </form>
+<!-- CTA -->
+<section class="cta">
+    <h2>Start using TaskFlow today</h2>
+    <a href="#" class="btn">Sign Up Free</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2026 Sirun Ankyun</p>
+    <p>© 2026 TaskFlow</p>
 </footer>
 
 </body>
