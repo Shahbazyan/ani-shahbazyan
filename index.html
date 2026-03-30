@@ -27,33 +27,93 @@ body{
     width:100%;
     background:rgba(255,255,255,0.7);
     backdrop-filter:blur(10px);
+    z-index:100;
 }
 
-.nav a{margin-left:20px;text-decoration:none;color:#333}
+.nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#334155;
+}
 
 /* HERO */
 .hero{
-    padding:150px 8% 80px;
+    position:relative;
+    padding:160px 8% 100px;
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
-.hero h1{font-size:48px;margin-bottom:20px;}
-.hero p{color:#64748b;margin-bottom:20px;}
-
-.btn{
-    padding:12px 25px;
-    border-radius:10px;
-    text-decoration:none;
-    background:#6366f1;
-    color:#fff;
-    display:inline-block;
+.hero-text{
+    max-width:520px;
 }
 
-.hero img{
-    width:350px;
-    border-radius:15px;
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#64748b;
+    margin-bottom:25px;
+}
+
+/* BUTTONS */
+.btn{
+    padding:14px 28px;
+    border-radius:10px;
+    text-decoration:none;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#6366f1;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#4f46e5;
+}
+
+.btn-outline{
+    border:1px solid #cbd5f5;
+    color:#4338ca;
+}
+
+/* HERO CARD */
+.hero-img{
+    position:relative;
+}
+
+.mock-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 30px 60px rgba(0,0,0,0.1);
+    width:300px;
+}
+
+.bar{
+    height:10px;
+    background:#6366f1;
+    border-radius:10px;
+    width:75%;
+    margin-top:10px;
+}
+
+/* FLOATING DECOR */
+.hero::after{
+    content:"";
+    width:150px;
+    height:150px;
+    background:#6366f1;
+    opacity:0.1;
+    position:absolute;
+    right:5%;
+    top:20%;
+    border-radius:50%;
 }
 
 /* LOGOS */
@@ -76,11 +136,19 @@ body{
     text-align:center;
 }
 
-.stat h2{font-size:32px;color:#6366f1}
+.stat h2{
+    color:#6366f1;
+    font-size:32px;
+}
 
 /* FEATURES */
 .features{
     padding:80px 8%;
+}
+
+.features h2{
+    text-align:center;
+    margin-bottom:50px;
 }
 
 .grid{
@@ -92,8 +160,13 @@ body{
 .card{
     background:white;
     padding:25px;
-    border-radius:15px;
+    border-radius:16px;
     box-shadow:0 10px 20px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
 }
 
 /* CAROUSEL */
@@ -109,7 +182,7 @@ body{
 }
 
 .slide{
-    min-width:300px;
+    min-width:260px;
     background:white;
     padding:20px;
     border-radius:15px;
@@ -137,10 +210,10 @@ body{
 .cta{
     margin:80px 8%;
     padding:60px;
-    background:linear-gradient(to right,#6366f1,#818cf8);
     border-radius:20px;
-    text-align:center;
+    background:linear-gradient(to right,#6366f1,#818cf8);
     color:white;
+    text-align:center;
 }
 
 /* FOOTER */
@@ -158,9 +231,8 @@ footer{
     text-align:center;
 }
 
-.hero img{
-    margin-top:30px;
-    width:100%;
+.hero-img{
+    margin-top:40px;
 }
 
 .grid{
@@ -191,12 +263,23 @@ footer{
 
 <!-- HERO -->
 <section class="hero">
-    <div>
-        <h1>Work smarter with FlowDesk</h1>
-        <p>Manage tasks, teams, and productivity in one simple platform.</p>
-        <a href="#" class="btn">Get Started</a>
+
+    <div class="hero-text">
+        <h1>Work smarter, not harder</h1>
+        <p>FlowDesk helps teams manage tasks, collaborate faster, and stay productive.</p>
+
+        <a href="#" class="btn btn-primary">Get Started</a>
+        <a href="#" class="btn btn-outline">Learn More</a>
     </div>
-    <img src="https://images.unsplash.com/photo-1551281044-8c2c7c1f4c57">
+
+    <div class="hero-img">
+        <div class="mock-card">
+            <h4>Dashboard</h4>
+            <p>Tasks completed: 75%</p>
+            <div class="bar"></div>
+        </div>
+    </div>
+
 </section>
 
 <!-- LOGOS -->
@@ -225,18 +308,22 @@ footer{
 
 <!-- FEATURES -->
 <section class="features">
+    <h2>Everything you need</h2>
+
     <div class="grid">
         <div class="card">
             <h3>Task Management</h3>
-            <p>Organize work easily.</p>
+            <p>Organize your workflow easily.</p>
         </div>
+
         <div class="card">
             <h3>Analytics</h3>
-            <p>Track your performance.</p>
+            <p>Track performance with insights.</p>
         </div>
+
         <div class="card">
             <h3>Collaboration</h3>
-            <p>Work with your team.</p>
+            <p>Work together in real-time.</p>
         </div>
     </div>
 </section>
@@ -255,17 +342,17 @@ footer{
 <!-- TESTIMONIAL -->
 <section class="testimonials">
     <div class="testimonial">
-        <p>"FlowDesk improved our team productivity a lot. Very simple and powerful."</p>
+        <p>"FlowDesk improved our team productivity. Very simple and powerful."</p>
         <strong>- Product Manager</strong>
     </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-    <h2>Start your free trial</h2>
+    <h2>Start your free trial today</h2>
     <p>No credit card required</p>
     <br>
-    <a href="#" class="btn">Try Now</a>
+    <a href="#" class="btn btn-primary">Try Now</a>
 </section>
 
 <!-- FOOTER -->
