@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shopify Expert | QA Tester</title>
+<title>TaskFlow - Smart Work Platform</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
     font-family:'Inter',sans-serif;
-    background:#f8fafc;
-    color:#1e293b;
+    background:#0f172a;
+    color:#e2e8f0;
 }
 
 /* NAV */
@@ -23,77 +22,74 @@ body{
     display:flex;
     justify-content:space-between;
     padding:20px 8%;
-    position:fixed;
-    width:100%;
-    background:white;
-    box-shadow:0 5px 20px rgba(0,0,0,0.05);
-    z-index:100;
 }
 
 .nav strong{
-    color:#4f46e5;
+    font-size:20px;
 }
 
 .nav a{
     margin-left:20px;
     text-decoration:none;
-    color:#334155;
+    color:#cbd5f5;
 }
 
 /* HERO */
 .hero{
-    padding:160px 8% 100px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.hero-text{
-    max-width:550px;
+    padding:100px 8%;
+    text-align:center;
 }
 
 .hero h1{
-    font-size:48px;
+    font-size:56px;
     margin-bottom:20px;
+    background:linear-gradient(to right,#6366f1,#22c55e);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 .hero p{
-    color:#64748b;
-    margin-bottom:25px;
-    line-height:1.6;
+    max-width:600px;
+    margin:auto;
+    color:#94a3b8;
+    margin-bottom:30px;
 }
 
 .btn{
     padding:14px 28px;
-    border-radius:10px;
+    border-radius:12px;
     text-decoration:none;
+    background:#6366f1;
+    color:white;
     display:inline-block;
 }
 
-.btn-primary{
-    background:#4f46e5;
-    color:white;
+/* DASHBOARD PREVIEW */
+.dashboard{
+    margin-top:60px;
+    display:flex;
+    justify-content:center;
 }
 
-.btn-primary:hover{
-    background:#4338ca;
-}
-
-/* IMAGE */
-.hero img{
-    width:420px;
+.dashboard-card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
     border-radius:20px;
-    box-shadow:0 20px 60px rgba(0,0,0,0.1);
+    padding:30px;
+    width:400px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
 }
 
-/* SERVICES */
-.services{
-    padding:80px 8%;
+.bar{
+    height:10px;
+    background:#6366f1;
+    border-radius:10px;
+    margin-top:10px;
 }
 
-.services h2{
-    text-align:center;
-    margin-bottom:40px;
+/* FEATURES */
+.features{
+    padding:100px 8%;
 }
 
 .grid{
@@ -103,44 +99,29 @@ body{
 }
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:16px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
     transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
+    background:rgba(255,255,255,0.08);
 }
 
-/* SKILLS */
-.skills{
-    padding:80px 8%;
-    background:#f1f5f9;
+/* TESTIMONIAL */
+.testimonials{
+    padding:100px 8%;
     text-align:center;
 }
 
-.skills span{
-    display:inline-block;
-    margin:10px;
-    padding:10px 18px;
-    background:white;
-    border-radius:20px;
-    font-size:14px;
-}
-
-/* PORTFOLIO */
-.portfolio{
-    padding:80px 8%;
-}
-
-.project{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+.testimonial{
+    max-width:600px;
+    margin:auto;
+    font-size:18px;
+    color:#cbd5f5;
 }
 
 /* CTA */
@@ -148,35 +129,21 @@ body{
     margin:80px 8%;
     padding:60px;
     border-radius:20px;
-    background:#4f46e5;
-    color:white;
+    background:linear-gradient(to right,#6366f1,#22c55e);
     text-align:center;
 }
 
-/* FOOTER */
 footer{
     text-align:center;
     padding:30px;
-    color:#64748b;
+    color:#94a3b8;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-
-.hero{
-    flex-direction:column;
-    text-align:center;
-}
-
-.hero img{
-    margin-top:30px;
-    width:100%;
-}
-
 .grid{
     grid-template-columns:1fr;
 }
-
 }
 
 </style>
@@ -186,95 +153,74 @@ footer{
 
 <!-- NAV -->
 <div class="nav">
-    <strong>Ani | Shopify Expert</strong>
-    <div>
-        <a href="#">Services</a>
-        <a href="#">Skills</a>
-        <a href="#">Work</a>
-    </div>
+<strong>TaskFlow</strong>
+<div>
+<a href="#">Features</a>
+<a href="#">Pricing</a>
+<a href="#">Docs</a>
+</div>
 </div>
 
 <!-- HERO -->
 <section class="hero">
+<h1>Manage Work Like a Pro</h1>
+<p>All-in-one platform to manage tasks, teams, and productivity with powerful analytics.</p>
+<a href="#" class="btn">Start Free</a>
 
-<div class="hero-text">
-    <h1>Shopify Store Setup & QA Testing Expert</h1>
-    <p>
-    I help businesses build clean, high-converting Shopify stores and ensure everything works perfectly.
-    With 7+ years in QA, I deliver bug-free, user-friendly online stores.
-    </p>
-
-    <a href="#" class="btn btn-primary">Hire Me on Upwork</a>
+<div class="dashboard">
+<div class="dashboard-card">
+<h3>Weekly Progress</h3>
+<p>Tasks Completed: 78%</p>
+<div class="bar" style="width:78%"></div>
 </div>
-
-<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+</div>
 
 </section>
 
-<!-- SERVICES -->
-<section class="services">
-<h2>What I Can Do For You</h2>
+<!-- FEATURES -->
+<section class="features">
 
 <div class="grid">
 
 <div class="card">
-<h3>Shopify Store Setup</h3>
-<p>Full store creation, products, collections, and launch ready.</p>
+<h3>Task Management</h3>
+<p>Organize tasks and track progress easily.</p>
 </div>
 
 <div class="card">
-<h3>Theme Customization</h3>
-<p>Clean UI, mobile responsive design, and custom sections.</p>
+<h3>Team Collaboration</h3>
+<p>Work together with real-time updates.</p>
 </div>
 
 <div class="card">
-<h3>QA Testing</h3>
-<p>Bug detection, checkout testing, and performance validation.</p>
+<h3>Analytics</h3>
+<p>Understand your performance with insights.</p>
 </div>
 
 </div>
-</section>
-
-<!-- SKILLS -->
-<section class="skills">
-<h2>Skills</h2>
-
-<span>Shopify</span>
-<span>HTML / CSS</span>
-<span>JavaScript</span>
-<span>QA Testing</span>
-<span>Selenium</span>
-<span>Bug Reporting</span>
 
 </section>
 
-<!-- PORTFOLIO -->
-<section class="portfolio">
-<h2>Recent Work</h2>
-
-<div class="project">
-<h3>Shopify Store Setup</h3>
-<p>Created full store with products, payments, and optimized UI.</p>
+<!-- TESTIMONIAL -->
+<section class="testimonials">
+<div class="testimonial">
+“TaskFlow completely transformed how our team works. Clean, fast, and powerful.”
 </div>
-
-<div class="project">
-<h3>QA Testing Project</h3>
-<p>Tested checkout flow and fixed critical bugs before launch.</p>
-</div>
-
 </section>
 
 <!-- CTA -->
 <section class="cta">
-<h2>Ready to build your Shopify store?</h2>
-<p>Let’s work together and make your store perfect.</p>
+<h2>Start using TaskFlow today</h2>
 <br>
-<a href="#" class="btn btn-primary">Contact Me</a>
+<a href="#" class="btn">Get Started</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
-<p>© 2026 Ani Shahbazyan</p>
+© 2026 TaskFlow
+</footer>
+
+</body>
+</html>
 </footer>
 
 </body>
